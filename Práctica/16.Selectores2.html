@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*Primera forma, asigne una clase a cada columna (c1,c2,c3,c4)*/ 
+        #teal {color: teal;} 
+        #red {color: red;}
+        #blue {color: blue;}
+        #orange {color: orange;}
+        #purple {color: purple;}
+        #olive {color: olive;}
+        #fuchsia {color: fuchsia;}
+        #green {color: green;} 
+        
+         /* .c1 {background: white;}
+            .c2{background: red;}
+            .c3 {background: green;}
+            .c4 {background: blue;}    */
+        /* Segunda forma, utilice el metodo combinador "Elemento adyacente*/
+        td + td {background: red;}    
+        td + td + td {background: green;} 
+        td + td +td +td {background: blue;}        
+        
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr id="teal">
+            <td class="c1">teal</td>
+            <td class="c2">teal</td>
+            <td class="c3">teal</td>
+            <td class="c4">teal</td>
+        </tr>
+        <tr id="red">
+            <td class="c1">red</td>
+            <td class="c2">red</td>
+            <td class="c3">red</td>
+            <td class="c4">red</td>
+        </tr>
+        <tr id="blue">
+            <td class="c1">blue</td>
+            <td class="c2">blue</td>
+            <td class="c3">blue</td>
+            <td class="c4">blue</td>
+        </tr>
+        <tr id="orange">
+            <td class="c1">orange</td>
+            <td class="c2">orange</td>
+            <td class="c3">orange</td>
+            <td class="c4">orange</td>
+        </tr>
+        <tr id="purple">
+            <td class="c1">purple</td>
+            <td class="c2">purple</td>
+            <td class="c3">purple</td>
+            <td class="c4">purple</td>
+        </tr>
+        <tr id="olive">
+            <td class="c1">olive</td>
+            <td class="c2">olive</td>
+            <td class="c3">olive</td>
+            <td class="c4">olive</td>
+        </tr>
+        <tr id="fuchsia">
+            <td class="c1">fuehsia</td>
+            <td class="c2">fuehsia</td>
+            <td class="c3">fuehsia</td>
+            <td class="c4">fuehsia</td>
+        </tr>
+        <tr id="green">
+            <td class="c1">green</td>
+            <td class="c2">green</td>
+            <td class="c3">green</td>
+            <td class="c4">green</td>
+        </tr>
+    </table>
+</body>
+</html>

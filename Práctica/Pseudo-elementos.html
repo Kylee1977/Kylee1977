@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /*::first-line*/
+    .fl::first-line { text-transform: uppercase;}
+
+    /*::first-letter*/
+    .fle1::first-letter {color: red; }
+    .fle2::first-letter {background-color: pink; color: red; float: left; font-family: monospace; font-size: 400%; }
+    .fle3::first-letter {color: aqua; }
+
+    /*before/after/content*/
+    .cuidado::before {content: "Aviso: "; font-weight: bold; text-decoration: underline; }
+    .auto-barto::after {content: "(escrito por Barto)."; font-weight: lighter; text-decoration: overline; color: gray;   }
+    .ff::before { content: url"../icone-ff.svg";  }
+
+    /*counter-increment/counter-reset*/ 
+    #mail::placeholder { color: blueviolet; font-size: 10px; font-style: italic;   }
+</style>
+<body>
+    ::first-line
+    <p class="fl">La primera linea de este 
+        parrafo se tiene que ver en mayusculas. Modifique ek tamaño de la fuente o el tamaño de la venta para ver cómo se modifica el aspecto del párrafo
+    </p>
+
+    ::first-letter
+    <p class="fle1">La primera letra de este párrafo se tiene que ver en rojo</p>
+    <p class="fle1">Y la primera de éste también</p>
+    <p class="fle1">1 Si es número, también se ve en rojo</p>
+
+    <p class="fle2">La primera letra de este párrafo es una letra capital, es decir, una letra más grande que ocupa varias líneas de texto.
+        Para ello, en la hoja de estilo tienes que hacer la letra flotante y aumetnar su tamaño. En este caso también he cambiado el color y el tipo de letra
+    </p>
+
+    <p class="fle3">😃 Si hay una imagen al principio del elemento, el aspecto de la primera letra de texto no se modifica</p>
+
+    ::before
+
+    <p>Este parrafo es un parrafo p sin clase.</p>
+    <p class="cuidado">Este párrafo tiene la clase "cuidado"</p>
+    <p>Este parrafo es un parrafo p sin clase.</p>
+
+    <p>Este parrafo es un parrafo p sin clase.</p>
+    <P class="auto-barto">Este párrafo es un p con clase "autor-barto".</P>
+    <p>Este parrafo es un parrafo p sin clase.</p>
+
+    <p>Este parrafo es un parrafo p sin clase.</p>
+    <p class="ff">Este párrafo tiene la clase "ff"</p>
+
+    ::placeholder 
+
+    <input type="email" id="mail" placeholder="Esta parte es la que se muestra como un mensaje ">
+
+
+</body>
+</html>

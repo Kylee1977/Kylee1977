@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio de selectores</title>
+</head>
+    <style>
+        body{
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #Primero { /*Selector de tipo id */
+            color: cornflowerblue; font-size: 16px; 
+        }
+        a { /*Selector de tipo atributo*/
+            color: orange; 
+        }
+        #Primero em { /*Selector de tipo id y combinador descendiente*/
+            background-color: #000BB0; background-color: #ffffcc; 
+        }
+        #segundo{ /*Selector de tipo id*/
+            color: gray;
+        }
+        em.especial{ /*Selector de tipo clase*/
+            color: #ffff00; background-color: #000000;
+        }
+        .normal span { /*Selector de tipo clase combinador descendiente*/
+            font-weight: bold; 
+        }
+    </style>
+<body>
+    <div id="Primero">
+        <p>
+            <a href="ttp://publicacionesaltaria.com/es/tienda/112-html-css-curso-practico.html">HTML y CSS: Curso Prático Avanzada</a>
+        </p>
+        <p>
+            Aun los inicios de <a href="https://es.wikipedia.org/wiki/Internet">Internet</a>se remontan 
+            a los años sesenta, no ha sido hasta los años novente cuando, gracias a la Web, se ha extendido 
+            su uso para todo el mundo. En pocos años, la Web ha evolucionado enormemente: se ha pasado de páginas sencillas, con pocoas 
+            imagénes y contenidos estáticos que eran visitaods por unos pocos usuarios a <em class="P1">páginas complejas, con contenidos dinámicos que provienen
+            de bases de datos y qye son visitadas por miles de usuarios al mismo tiempo</em>
+        </p>
+    </div>
+    <div id="segundo" class="normal">
+        <p>
+            Todas las páginas están internamente construidas con la misma tecnología, con el <em class="especial">Lenguaje de marcas de hipertexto</em> 
+            (<span>Hypertext Markup Lenguage</span> <a href="https://es.wikipedia.org/wiki/HTML">HTML</a>)
+            y con las <em class="especial">Hojas de estilo en cascada</em> (<span>Cascading Style SHeets</span>
+            <a href="https://es.wikipedia.org/wiki/CSS">CSS</a>
+        </p>    
+        <P>
+            Este libro es <em>adecuado para cualquiera que tenga interés en aprender a desarollar sus 
+            páginas web</em>. No son necesarios conocimientos previos para aprender con este libro, lo unico que es necesario 
+            es saber utilizar un ordenador y saber nevegar por la web            
+        </P>
+    </div>
+</body>
+</html>

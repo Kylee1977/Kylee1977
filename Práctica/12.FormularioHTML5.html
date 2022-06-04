@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de prueba de HTML5</title>
+    <style>
+        /*Tipos de input*/
+        /*Type text: Control interactivo que nos permite intruducir datos de tipo texto*/
+        /*Type email: Control interctivo que indica que se debe tabular un correo que por lo menos debe tener datos alfanumericos antes y despues de el signo @ (d@d) de lo contrario no lo aceptará como valido*/
+        /*Type url: Contol interactivo que permite tabular enlaces web*/
+        /*Type date: Control interactivo que permite ingresar o escoger datos de tipo fecha corta (01/01/2001*/
+        /*Type time: Control interactivo que permite ingresar o escoger la hora y minutos de un ciclo de 24hr*/
+        /*Type datetime: Control interativo que permite ingresar o escoger en un mismo conjunto datos de tipo fecha corta y datos de tipo hora*/
+        /*Type month: Control interactivo que permite escoger o ingresar uno de los doce meses de año*/
+        /*Type week: Control interactivo que permite ingresar o escoger una de las x semanas que tiene el año*/
+        /*Type number: Control interactivo que permite ingresar datos de tipo numérico. (en este ejemplo tiene propiedades en la que se indica el minimo (min) y máximo (max) permitidos para ingresar. Comenzando con una opción de valor 0 */
+        /*Type Tel: Control interactivo que permite ingresar datos de tipo númerico, enfatizando que se trata de un número de celular o télfono*/
+        /*Type Search: Control interactivo que permite ingresar consultas de busqueda*/
+        /*Type Color: Comtrol interactivo que permite especificar un color atraves de una interfaz visual o bien ingresando datos hexadesimales (#000 negro)  */
+        /*Type Sumit: Control interactivo que muestra un boton interactivo el cual ejecuta una accion designada. Esta trabaja en conjunto con el elemente VALUE; el cual funciona como una etique para el boton*/
+    </style>
+</head>
+<body>
+    <form action="" method="get">
+    <p> 
+        Nombre: <input type="text" name="name_control" id="" autofocus required >
+    </p>
+    <p>
+        Correo electrónico: <input type="email" name="email_control" id="mail" required >
+    </p>
+    <p>
+        <input type="url" name="url_control" id="" placeholder="Esbribe la URL de tu página web personal"> <style>/*placeholder es un pseudo elemento*/</style>
+    </p>
+    <p>
+        Fecha: <input type="date" name="date_control" id="">
+    </p>
+    <p>
+        Tiempo: <input type="time" name="time_control" id="">
+    </p>
+    <p>
+        Fecha y hora: <input type="datetime-local" name="" id="">
+    </p>
+    <p>
+        Mes: <input type="month" name="month_control" id="">
+    </p>
+    <p>
+        Semana: <input type="week" name="week_control" id="">
+    </p>
+    <p>
+        Número (min -10, max 10): <input type="number" name="number_control" id="" min="-10" max="10" value="0" > 
+    </p>
+    <p>
+        Teléfono: <input type="tel" name="tel_control" id=""> 
+    </p>
+    <p>
+        Termino de búsqueda: <input type="search" name="search_control" id="">
+    </p>
+    <p>
+        Color favorito: <input type="color" name="color_control" id="">
+    </p>
+    <p>
+        <input type="submit" value="Enviar">
+    </p>
+    </form>
+</body>
+</html>

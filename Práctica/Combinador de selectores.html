@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div ~ p {color: orange;}
+    </style>
+</head>
+<body>
+    <div>
+        <p>Hijo descendiente/directo</p> <style>/*Descendientes. div p*/</style>
+        <p>Hijo directo</p> <style>/*Hijo directo. div > p*/</style>
+        <span><p><b>Hijo descendiente pero no directo(dentro de elemento span)</b></p></span> <style>/*Descendientes. "div p" "div span*/</style> 
+    </div>
+    <p>Elemento adyacente/general de hermanos</p> <style>/*Elementos Adyacentes. div + p */</style>
+    <p>General de hermanos o hermanos del selector especificado</p> <style>/*General de hermanos. div ~ p*/</style>
+</body>
+</html>

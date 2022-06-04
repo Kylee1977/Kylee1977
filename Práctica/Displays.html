@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /*in-line*/
+    .caja {background-color: yellow; border: 1px solid black; width: 100px; height: 100px; padding: 5px; margin: 50px/*vertical*/ 10px/*horizontal*/  ; }
+    /*Es un estilo in line, porque se alinean uno tras otro. No respetan los anchos, los altos ni los márgenes verticales de los elementos*/
+    /*Solo aplico los estilos del padding y el margen horizontal*/ 
+    
+    /*Block*/
+    .caja2 {background-color: orange; border: 10px solid black; width: 100px; height: 100px; padding: 5px; margin: 50px 10px;   }
+    /*Ahora los elementos no fluyen en torno al texto, sino que por defecto se renderizan en líneas independientes. Además respeta los anchos, altos y márgenes verticales*/
+
+    /*Inline-Block / display:block*/
+    .caja3 {display:inline-block; background-color: yellow; border: 1px solid black; width: 100px; height: 100px; padding: 5px; margin: 50px/*vertical*/ 10px/*horizontal*/  ;  } 
+
+    .caja4 {display: block; background-color: aqua; border: 2px solid black; width: 77px; /*Ahora podemos manipular estas dos propiedades*/ height: 80px; padding: 5px; margin: 50px 70px; /*ahora podemos manipular el margen horizontal*/ }
+
+    .caja5 {display: inline; background-color: yellow; border: 1px solid black; width: 100px; height: 100px; padding: 5px; margin: 50px/*vertical*/ 10px/*horizontal*/  ;   }
+</style>
+<body>
+    In-line
+    
+    <P>Lorem ipsum dolor sit amet, consectetur adiposion</P>
+    <span class="caja">CAJA 1 </span>
+    <span class="caja">CAJA 2 </span>
+    <span class="caja">CAJA 3 </span>
+    <P>Lorem ipsum dolor sit amet, consectetur adiposion</P>
+    /*Es un estilo in line, porque se alinean uno tras otro. No respetan los anchos, los altos ni los márgenes verticales de los elementos*/
+    /*Solo aplico los estilos del padding y el margen horizontal*/ 
+
+    Block
+
+    <P>Lorem ipsum dolor sit amet, consectetur adiposion</P>
+    <div class="caja2">CAJA 1 </div>
+    <div class="caja2">CAJA 2 </div>
+    <div class="caja2">CAJA 3 </div>
+    <P>Lorem ipsum dolor sit amet, consectetur adiposion</P>
+    /*Ahora los elementos no fluyen en torno al texto, sino que por defecto se renderizan en líneas independientes. Además resta los anchos, altos y márgenes verticales*/
+
+    Inline-block / Propiedad "display:block"
+
+    <P>Lorem ipsum dolor sit amet, consectetur adiposion</P>
+    <span class="caja3">CAJA 1 </span>
+    <span class="caja3">CAJA 2 </span>
+    <span class="caja3">CAJA 3 </span>
+    <P>Lorem ipsum dolor sit amet, consectetur adiposion</P>
+    Ahora se respetan todas las propiedades (ancho, alto, y margen vertical), pero los elementos siguien estando en la misma línea. 
+
+    Elmentos In-line con propiedad Display:block
+
+    <span class="caja4">CAJA 1 </span>
+    <span class="caja4">CAJA 2 </span>
+    <span class="caja4">CAJA 3 </span>    
+
+    <p>Los elementos In-line se puede estelizar con las cualidades de los elementos de bloque. Es decir que, renderizará en lineas independientes y además podremos manipular el ancho, alto y margen de los elementos </p>
+
+    <p>Elementos en Block con propiedad Display-inline</p>
+
+    <div class="caja5">CAJA 1 </div>
+    <div class="caja5">CAJA 2 </div>
+    <div class="caja5">CAJA 3 </div>
+
+    <p>Estas cajas estan contenidas en un elemento <div> el cual es un elemento de tipo bloque, pero al asignarle la propiedad Display-inline este toma las cualidades de tipo In-line. Es decir que se agruparan una tras de otra formando una fila
+        , el tamaño será en proporción al tamaño del texto contenido por lo que no se podran manipular ancho, altura y margen vertical</p>
+</body>
+</html>

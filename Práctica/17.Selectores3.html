@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de selectores</title>
+</head>
+<style>
+    /* A todos las etiques con atributo o propiedad href, se le añadio un color 
+    de fuente rojo y con la psudoclase text decoration se le elimino el subrayado que trea por defecto. */
+    a {
+        color: #F00;
+        text-decoration: none; 
+     }
+     /*Cuando el usuario se redirija al link, la etique a se tornara de color verde. Esto con la pseudoclase visited*/
+    a:visited {
+        color: #0A0;
+    }
+    /*Cuando el usuairo interectua con los enlaces mas no los activa, este cambiara su color de fuente y fondo, ademas los subrayará. */
+    a:hover {
+        color: #FFF;
+        background-color: #F00;
+        text-decoration: underline;
+        }
+
+    a:focus {
+          color: #00F;
+          text-decoration: underline;   
+        }  
+        /*Cuando el usuario actiba los link, el texto cambiara a color anaranjado y elminará el subrayado. Además el fondo se tornará de color blanco*/  
+    a:active {
+          color: #F60;
+          background-color: #FFF; 
+          text-decoration: none;    
+        }    
+        .con {background: orange;}
+</style>
+
+<body>
+    <h1>Universidad de Alicante</h1> 
+    <ul>
+        <li> <a href="https://www.cochesyconcesionarios.com/uploads/nissan/gt-r/1/co/my20-gt-r-nismo-germany-26-46adb41faf277912794b30f18a922a14440e1cd4.jpeg">Presentación</a></li>
+        <li> <a href="https://conduciendo.com/wp-content/uploads/2017/10/Hyundai-Genesis-Coupe-2013-100112-01.jpg">Estudios</a></li>
+        <li> <a href="https://salaguamotors.com/wp-content/uploads/2021/04/Used-BMW-335i.jpg">Deportes</a></li>
+        <li> <a href="https://i.ytimg.com/vi/8Y-GTnnKAAM/maxresdefault.jpg">Servicios</a></li>
+    </ul>   
+    <a class="con" href="">Esto tiene un foco</a>
+    <a class="sin" href="">Esto no tiene un foco</a>
+</body>
+</html>

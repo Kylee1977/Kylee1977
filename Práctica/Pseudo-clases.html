@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    /*Pseudo-Clases */
+        /*active*/
+        .Unoactive { /*Selector de clase*/ 
+            background-color: white; /*Color de fondo*/
+            color: black; /*Color de texto*/
+        }
+        .Dosactive:active{ /*Selector de clase y Pseudo clase*/
+          background-color: black; /*Color de fondo para clase*/
+          color: white;  /*color de texto para clase y active*/    
+        }
+        #Gactive{
+            background-color: white; color: black;
+        }
+        .Sactive:active{
+            background-color: black; color: white; /*colores para clase y acitve*/
+        }
+
+        /*:hover*/
+        .unohover{ /*Selector de clase/
+            background-color: white; /*Fondo para el<p>*/
+            color: black; /*color para el texto*/
+        }
+        .doshover:hover { /*Selector de clase y Pseudo clase*/
+            background-color: black; /*Color de fondo para clase*/
+            color: white;/*color de texto para clase y hover*/
+        }
+        p { /*Selector de tipo*/
+            background-color: white; /*Fondo para <p>*/
+            color: black; /*color para texto*/
+        }
+        #Ghover span:hover{   /*Selector de id. Combinador descendiente*. Pseudo clase*/ 
+            background-color: black;
+            color: white;
+        }
+        /*focus*/
+        input:focus { /*Selector de tipo. Pesudo clase*/
+            border: red 3px dotted;
+            padding: 1px;
+        }
+        /*link y visited*/
+        .doslink:link { /*Selector de clase. Pseudo clase*/
+            background: lightblue;
+        }
+        .doslink:visited {
+            background-color: coral;
+        }
+        .treslink:link {
+            color: green;
+        }
+        .cuatrolink:link {
+            color: green;
+        }
+        .cuatrolink:visited {   
+            color: red;
+        }
+        .cincolink:link { background-color: white; color: blue; border: orange 3px solid; outline: green 3px solid;  }
+        .cincolink:visited { background-color: yellow; color: red; border-color: black; outline-color: red;    }
+        .seislink:link, .seislink:visited {background-color: lightblue; }
+        .sietelink:link {background-color: lightblue; }
+        
+        /*first-child*/
+        .unodiv {
+            border: black 5px solid; margin: 10px; padding: 10px;
+         }
+         .unodiv p:first-child {color: red; }
+         
+         .dosdiv {border: black 5px solid; margin: 10px; padding: 10px; }
+         .dosdiv p:first-child {color: red;}
+
+        /*:lang*/
+        .unolang :lang(es) { quotes: "<"">";   } 
+        .doslang :lang(en) {quotes: "'""'"; }
+    </style>
+</head>
+<body> 
+    <h1>Pseudo-Clases Dinámicas</h1>
+    :active
+    <style>/*active*/</style>
+    <p class="Unoactive">Este parrafó está escrito en negro sobre un fondo blanco, pero cuando se hace clic en <a class="Dosactive" href="nada">este enlace</a>,
+    el enlace se muestra de colo blanco sobre fondo negro
+    </p>
+    
+    <p id="Gactive"><span class="Sactive">Este párrafo está escrito en negro sobre blanco, pero cuando se hace clic en él, se muestra de color blanco sobre
+        fondo negro</span>
+    </p>
+
+    :hover
+    <style>/*hover*/</style>
+    <p class="unohover">Es párrafo está escrito en negro sobre blanco, pero cuando se posiciona el cursor en <a class="doshover" href="nada">este enlace</a>,
+    el enlace se muestra de color blanco sobre fondo negro</p>
+    
+    <p id="Ghover"><span>Este párrafo esta escrito en negro sobre blanco, pero cuando se pasa el cursor por encima del mismo, se muestrada
+        de colo blanco sobre fondo negro</span>
+    </p>
+    
+    focus: En el siguiente ejemplo al hacer clic en un campo de texto (o cambiar de campo con el tabular), el campo seleccionado se resalta con un borde rojo
+    <style>/*focus*/</style>
+    <table>
+        <input type="text" value="Texto 1">
+        <input type="text" value="Texto 2">
+        <input type="text" value="Texto 3">
+        <input type="text" value="Texto 4">
+    </table>
+
+    <h1>Pseudo-Clases de enlace</h1>
+
+    :linky :visited
+    <p class="unolink">Este párrafo contiene <a class="doslink" href="#destino">un enlace</a> al párrafo siguiente. No cambiará de aspecto hasta agregar el :visited</p>
+    <p id="destino">Este párrafo es el destino del enlace anterior</p>
+
+    <p>Este párrafo tiene un <a id="destinodos" class="treslink" href="#destinodos">enlace a si mismo</a>. El enlace no apararece como suele ser habitual, porque se muestra de verde</p>
+    <p>Este párrafo tiene un <a id="destinotres" class="cuatrolink" href="#destinotres">enlace a sí mismo</a>. Si el navegador reconoce que el enlace se ha visitado, en vez de morado, se mustra en rojo</p>
+    
+    <p>Este párrafo tiene un <a id="destinocuatro" class="cincolink" href="#destinocuatro">enlace a sí mismo</a>. Si el navegador reconoce que el inlace se ha visitado, se muestra en rojo y con el fondo 
+    amarillo (y con un borde negro y un contorno rojo</p>
+
+    <p>Si queremos cambiar el aspecto de un enlace, pero sin distinguir que el enlace se haya visitado o no, tenemos entonces tres opciones:</p>
+    <ul>
+        <li>Definir simultaneamente las dos Pseudo-Clases</li>
+        <p>Este parrafo contiene <a class="seislink" href="#destinocinco">un enlace</a> al parrafo siguiente</p>
+        <p id="destinocinco">Este parrafo es el destino del enlace anterior</p>
+        <li>Definir únicamente los enlaces no visitados</li>
+        <p>Este parrafo contiene <a class="sietelink" href="#destinoseis">un enlace</a> al parrafo siguiente</p>
+        <p id="destinoseis">Este parrafo es el destino del enlace anterior</p>
+        <li>Definir los enlaces en general (a [] )</li>
+    </ul>
+    :first-child
+    
+    <div class="unodiv">
+    <p>Este es el primer párrafo  p  en una deivisión que contiene tres parrafos</p>
+    <p>Este es el segundo parrafo p en una división que contiene tres párrafos</p>
+    <p>Este es el tercer parrafo p en una división que contiene tres parrafos</p>
+    </div>    
+
+    <div class="dosdiv">
+        <pre>El primer hijo no es un párrafo p, así que no cambiara dado que no fue especificado en la hoja de estilo</pre>
+        <p>Este es el primer p en una division que contiene tres párrafos, pero no es el primer elemento hijo dentrotro del elemento contenedor</p>
+        <p>Este es el segundo p en una division que contiene tres párrafos</p>
+        <p>Este es el tercer p en una division que contiene tres párrafos</p>
+    </div>
+
+    :lang 
+    <p class="unolang">Ambrose Bierce dijo (más o menos)que <q lang="es">una cita es una manera de repetir érroneamente las palabras de otros</q>.</p>
+    <p class="dolang">Ambrose Bierce dijo (más o menos)que <q lang="en">a quotation is the act of repeating erroneusly the words of another</q>.</p>
+
+    
+</body>
+</html> 
